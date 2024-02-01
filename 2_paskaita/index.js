@@ -1,9 +1,11 @@
 const express = require("express");
 const cors = require("cors");
+
 const app = express();
 const port = 3000;
 
 app.use(cors());
+app.use(express.json()); // pasako, jog musu aplikacija bendraus JSON formatu
 
 // susikuriame defaultini API
 app.get("/", (req, res) => {
@@ -22,14 +24,21 @@ app.get("/brands", (req, res) => {
 // dinaminis route
 app.get("/brands/:firstLetter", (req, res) => {
   // grazinti visus brandus kurie prasideda duota raide
-  console.log(req.params);
   // const firstLetter = req.params.firstLetter; old way/another way
   const { firstLetter } = req.params; // su dvitaskiu einantys parameterai (dinaminiai laukai);
   console.log(firstLetter);
+
   const filteredBrands = brands.filter(
     (brand) => brand[0].toLowerCase() === firstLetter.toLowerCase()
   );
 
+  res.send(brands);
+});
+
+// POST API kuris prideda brandą į masyvą
+app.post("/brands", (req, res) => {
+  const { brand } = req.body; // siunciamas body is frontend, butinai turi but objektas ar masyvas
+  brands.push(brand);
   res.send(brands);
 });
 
