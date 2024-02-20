@@ -1,0 +1,133 @@
+body,
+h1,
+h2,
+p,
+ul,
+li,
+button {
+  font-family: Arial, sans-serif;
+}
+
+ul {
+  padding: 10px 0;
+  text-align: center;
+  margin: 0;
+}
+
+li {
+  display: inline-block;
+  margin-right: 50px;
+  color: grey;
+}
+
+li.active {
+  color: #007bff;
+}
+
+/* Button reset and styling */
+button {
+  cursor: pointer;
+  background-color: transparent;
+  padding: 10px 20px; /* Consistent button padding */
+  border-radius: 5px; /* Rounded corners for buttons */
+}
+
+/* New Membership button specific styling */
+#new-membership {
+  background-color: #007bff;
+  color: white;
+}
+
+#new-membership:hover {
+  background-color: #0056b3;
+}
+
+/* Main container */
+main {
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+/* Header styles */
+header {
+  background-color: #f4f4f4;
+  padding: 20px;
+  text-align: center;
+}
+
+header p {
+  text-align: left;
+  padding-left: 20px; /* Adjust as needed for alignment */
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Membership cards styles */
+#membership-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Card styles */
+[class^="card"] {
+  background-color: #fff;
+  border: 1px solid #e6e6e6; /* Light grey border */
+  border-radius: 6px; /* Slightly rounded corners for the card */
+  padding: 20px;
+  margin: 10px 0; /* Add margin for spacing between cards if needed */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  position: relative;
+  text-align: left; /* Align text to the left */
+  width: 250px; /* Fixed width, adjust as necessary */
+}
+
+.card h2 {
+  color: #333;
+  font-size: 1.5em; /* Example size, adjust as needed */
+  margin-bottom: 5px; /* Adjust space between price and description */
+}
+
+.card p {
+  font-size: 1em;
+}
+
+.delete-button {
+  background-color: #ffe5e5;
+  border: none;
+  color: #ff6161;
+  border-radius: 20%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 16px; /* Adjust icon size as needed */
+}
+
+.delete-button:hover {
+  background-color: #ffcccc;
+}
+/* Footer styles */
+footer {
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+
+  bottom: 0;
+}
+
+footer p {
+  color: #666;
+}
